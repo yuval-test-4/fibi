@@ -1,3 +1,4 @@
+using EventsApi.Infrastructure.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -8,4 +9,6 @@ public class EventsApiDbContext : IdentityDbContext<IdentityUser>
 {
     public EventsApiDbContext(DbContextOptions<EventsApiDbContext> options)
         : base(options) { }
+
+    public DbSet<UserDbModel> Users { get; set; }
 }
