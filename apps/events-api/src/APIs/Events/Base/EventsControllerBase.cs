@@ -16,7 +16,7 @@ public abstract class EventsControllerBase : ControllerBase
         _service = service;
     }
 
-    [HttpGet("")]
+    [HttpPost("")]
     [Authorize(Roles = "user")]
     public async Task<string> CreateEvent([FromBody()] CreateEventInput createEventInputDto)
     {
